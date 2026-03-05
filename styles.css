@@ -1,0 +1,51 @@
+:root{
+  --bg:#0f1115;
+  --fg:#ffffff;
+  --muted:rgba(255,255,255,.68);
+  --line:rgba(255,255,255,.12);
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; margin:0; }
+body{
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.page{
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  padding:48px 16px;
+}
+
+.hero{
+  text-align:center;
+  max-width: 900px;
+}
+
+.hero h1{
+  margin:0 0 10px 0;
+  font-size: clamp(32px, 4vw, 52px);
+  letter-spacing: .4px;
+}
+
+.hero p{
+  margin:0;
+  color: var(--muted);
+  font-size: clamp(14px, 1.5vw, 18px);
+}
+
+.stage{
+  width: min(1100px, 96vw);
+}
+
+/* barbell component wrapper (the component will add its SVG inside) */
+#barbell-mount{
+  width:100%;
+  height: min(420px, 70vh);
+}
